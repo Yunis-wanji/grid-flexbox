@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/grid-flexbox/contact.css">
+    <title>Responsive Grid</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="top">
+        <header class="hero">
+<h2>Terry Tacos Joint</h2>
+<p>Pretty Good Tacos!</p>
+        </header>
+        <div class="cta cta1">
+            <p class="price">1.99$</p>
+            <p>Tacos</p>
+        </div>
+        <div class="cta cta2">
+            <p class="price">3.99$</p>
+            <p>Kombusha</p>
+        </div>
+    </div>
+    <nav class="menu">
+        <button aria-expanded="false" aria-controls="menu-list">
+        <span class="open">☰</span>
+        <span class="close">X</span>
+        Menu
+        </button>
+        <ul id="menu-list">
+     <li><a href="#">Tacos</a></li>
+     <li><a href="#">Beer</a></li>
+     <li><a href="#">Wines</a></li>
+     <li><a href="#">Desserts</a></li>
+     <li><a href="#">Reservations</a></li>
+        </ul>
+    </nav>
+    <section class="features">
+        <div class="feature">
+            <div class="icon">🌮</div>
+            <h4>Tacos</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, laudantium!</p>
+        </div>
+        <div class="feature">
+            <div class="icon">🍺</div>
+            <h4>Beer</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, laudantium!</p>
+        </div>
+        <div class="feature">
+            
+          <div class="icon">🥂 </div>
+            <h4>Wines</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, laudantium!</p>
+        </div>
+        <div class="feature">
+             <div class="icon">🎵</div>
+            <h4>Music</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas, laudantium!</p>
+        </div>
+    </section>
+    <section class="about">
+        <img src="/grid-flexbox/img/the-nix-company-61wG5-SAF_Y-unsplash.jpg" alt="taco"  width="300px" height="300px">
+        <div class="content">
+        <h2>Featured Taco</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br/> Illo nam perferendis voluptates, ad dolor maxime?</p>
+        <button>Learn More --></button>
+        </div>
+    </section>
+    <section class="gallery">
+        <h3>Instant Grams</h3>
+    <img src="/grid-flexbox/img/pexels-johannes-plenio-1118873.jpg" alt="tacos" width="200px" height="200px">
+    <img src="/grid-flexbox/img/the-nix-company-61wG5-SAF_Y-unsplash.jpg" alt="tacos" width="203px" height="203px">
+    <img src="/grid-flexbox/img/pexels-johannes-plenio-1118873.jpg" alt="tacos" width="205px" height="205px">
+    <img src="/grid-flexbox/img/the-nix-company-61wG5-SAF_Y-unsplash.jpg" alt="tacos" width="206px" height="206px">
+    <img src="/grid-flexbox/img/the-nix-company-61wG5-SAF_Y-unsplash.jpg" alt="tacos" width="208px" height="208px">  
+    <img src="/grid-flexbox/img/pexels-johannes-plenio-1118873.jpg" alt="tacos" width="208px" height="208px"> 
+    <img src="/grid-flexbox/img/pexels-johannes-plenio-1118873.jpg" alt="tacos" width="206px" height="206px"> 
+    </section>
+  </div>
+  <script>
+
+    const navButton = document.querySelector('button[aria-expanded]')
+
+    const toggleNav=({target})=>{
+          const expanded = target.getAttribute('aria-expanded')=== 'true'|| false ;
+          navButton.setAttribute('aria-expanded', !expanded)
+    }
+    navButton.addEventListener('click' , toggleNav)
+  </script>
+</body>
+</html>
